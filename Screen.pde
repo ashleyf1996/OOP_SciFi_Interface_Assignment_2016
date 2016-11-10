@@ -9,31 +9,19 @@ float b=20;
   
    void introScreen()
    {
+     background(0);
      fill(255,0,255);
       textSize(60);
       textAlign(LEFT);
-      text("\nTERMINATOR", 300, 200);
+      text("\nTERMINATOR", 400, 200);
       textSize(10);
-     text("Click to see interface", 450, 350);
+     text("Click to see interface", 550, 350);
            
    }
-   void menu()
-  {
-    if (menu == true)
-    {
-      println("Hey");
-      introScreen();
-    }
-    
-    else
-    {
-    nextScreen();
-    }
+
    // line(x+10,y+10,x+10,height/3-10);
   // x++;
   
-
-  }
 
    void nextScreen()
    {

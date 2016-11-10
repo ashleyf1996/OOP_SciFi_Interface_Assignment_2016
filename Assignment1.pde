@@ -1,22 +1,24 @@
-boolean menu = true;
+boolean menu = false;
 void setup()
 {
   size(1350,700);
-  
-Screen screen;
-screen = new Screen();
+ background(0);
 
-screen.introScreen();
-screen.menu();
-
-screen.nextScreen();
 }
+Screen screen = new Screen();
 
    void mousePressed()
   {
-       menu = false;
+       menu = true;
   }
 void draw()
 {
-  
+  if(menu == false)
+  {
+    screen.introScreen();
+  }
+  else
+  {
+screen.nextScreen();
+  }
 }
