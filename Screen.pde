@@ -52,19 +52,26 @@ float b=20;
        a++;
      
      }
-     
+     textSize(15);
+
      fill(255,255,0);
-     ellipse(50,300,30,30);
+     text("Get Target profile", 45, 270);
+    
+     ellipse(50,300,50,50);
      fill(0,255,0);
-     ellipse(50,380,30,30);
+     text("Battery Life", 50, 350);
+     ellipse(50,380,50,50);
      fill(255,255,255);
-     ellipse(50,460,30,30);
+      text("blah blah", 50, 430);
+     ellipse(50,460,50,50);
+     
+
      
        float xy=30;
  
     stroke(255);          // Setting the outline (stroke) to black
     fill(0);
-    rect(xy+60,xy+250,30,200);
+   
     noFill();
     ellipse(width/2,height/2,250,250);
     //rhs
@@ -76,7 +83,9 @@ float b=20;
      arc(width/2, height/2, 100, 100, PI / 2, 2 * PI / 2);
      
       //upper half
-      arc(width/2, height/2, 50, 50, -PI, 4);  
+      fill(255,0,0);
+      ellipse(width/2,height/2,40,40); 
+
   
     
    }
