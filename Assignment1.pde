@@ -1,8 +1,16 @@
 boolean menu = false;
+
+PImage img;
+
+
+
+
+
 void setup()
 {
   size(1350,700);
  background(0);
+  img = loadImage("terminator_pic.jpg");
 
 }
 Screen screen = new Screen();
@@ -20,16 +28,15 @@ void draw()
   else
   {
 screen.nextScreen();
+image(img, 0, 0);
   }
-  
-    if (keyPressed)
-       {
-          if (keyCode == RIGHT)
-            {
-             
-              background(255);
+
  
-            
-            }
-       }  
+   
 }
+
+
+ 
+
+
+    

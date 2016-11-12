@@ -1,3 +1,4 @@
+
 class Screen
 {
   boolean menu = true;
@@ -6,7 +7,7 @@ class Screen
 float y=20;
 float a=20;
 float b=20;
-  
+
    void introScreen()
    {
      background(0);
@@ -25,7 +26,7 @@ float b=20;
 
    void nextScreen()
    {
-     
+    
        background(0);
     stroke(255,0,255);
     line(x,y,x,height/3);
