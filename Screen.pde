@@ -29,11 +29,11 @@ float b=20;
        background(0);
     stroke(255,0,255);
     line(x,y,x,height/3);
-    line(x,height/3,width-20,height/3);
+    line(x,y+80,width-20,y+80);
     line(width-20,height/3,x+width-40,20);
     line(x,y,width-20,y);
     stroke(255,255,255);
-   line(a+10,b+10,a+10,height/3-10);
+   line(a+10,b+10,a+10,y+70);
   
     if(a == width-30)
      {
@@ -54,11 +54,32 @@ float b=20;
      }
      
      fill(255,255,0);
-     ellipse(50,300,50,50);
+     ellipse(50,300,30,30);
      fill(0,255,0);
-     ellipse(50,380,50,50);
+     ellipse(50,380,30,30);
      fill(255,255,255);
-     ellipse(50,460,50,50);
+     ellipse(50,460,30,30);
+     
+       float xy=30;
+ 
+    stroke(255);          // Setting the outline (stroke) to black
+    fill(0);
+    rect(xy+60,xy+250,30,200);
+    noFill();
+    ellipse(width/2,height/2,250,250);
+    //rhs
+    arc(width/2, height/2, 200, 200, -PI / 6, PI / 6);
+    arc(width/2, height/2, 200, 200, PI / 2, 2 * PI / 2);
+    
+    //lhs
+     arc(width/2, height/2, 120, 120, -PI / 6, PI / 6);
+     arc(width/2, height/2, 100, 100, PI / 2, 2 * PI / 2);
+     
+      //upper half
+      arc(width/2, height/2, 50, 50, -PI, 4);  
+  
+    
    }
+ 
   
  }

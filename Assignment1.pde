@@ -21,4 +21,15 @@ void draw()
   {
 screen.nextScreen();
   }
+  
+    if (keyPressed)
+       {
+          if (keyCode == RIGHT)
+            {
+             
+              background(255);
+ 
+            
+            }
+       }  
 }
