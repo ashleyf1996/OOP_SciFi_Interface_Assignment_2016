@@ -28,7 +28,9 @@ void draw()
   else
   {
 screen.nextScreen();
-image(img, 0, 0);
+image(img, width/2-25,height/2-25);
+img.resize(50,50);
+
   }
 
  

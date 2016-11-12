@@ -63,7 +63,7 @@ float b=20;
      text("Battery Life", 50, 350);
      ellipse(50,380,50,50);
      fill(255,255,255);
-      text("blah blah", 50, 430);
+      text("Weapons", 50, 430);
      ellipse(50,460,50,50);
      
 
@@ -85,7 +85,11 @@ float b=20;
      
       //upper half
       fill(255,0,0);
-      ellipse(width/2,height/2,40,40); 
+      ellipse(width/2,height/2,70,70); 
+      stroke(255);
+      fill(255,255,255);
+      textSize(34);
+      text("TARGET - AQUIRED: Inside house", width/2-200,height/2+200);
 
   
     
