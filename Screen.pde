@@ -46,10 +46,12 @@ class Screen
      
      }
      textSize(15);
-
+   fill(255,0,0);
+     ellipse(50,220,50,50);
+     text("main screen", 50,190);
      fill(255,255,0);
      text("Get Target profile", 45, 270);
-    
+     
      ellipse(50,300,50,50);
      fill(0,255,0);
      text("Battery Life", 50, 350);
