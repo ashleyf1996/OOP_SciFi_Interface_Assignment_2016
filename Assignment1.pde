@@ -3,6 +3,11 @@ boolean menu = false;
 PImage img;
 
 
+  float x=20;
+float y=20;
+float a=20;
+float b=0;
+float c=20;
 
 
 
@@ -31,10 +36,7 @@ screen.nextScreen();
 image(img, width/2-25,height/2-25);
 img.resize(50,50);
 
-  }
-
- 
-   
+  }   
 }
 
 

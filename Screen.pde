@@ -3,10 +3,6 @@ class Screen
 {
   boolean menu = true;
   boolean endOfScreen = false;
-  float x=20;
-float y=20;
-float a=20;
-float b=20;
 
    void introScreen()
    {
@@ -28,13 +24,9 @@ float b=20;
    {
     
        background(0);
-    stroke(255,0,255);
-    line(x,y,x,height/3);
-    line(x,y+80,width-20,y+80);
-    line(width-20,height/3,x+width-40,20);
-    line(x,y,width-20,y);
-    stroke(255,255,255);
-   line(a+10,b+10,a+10,y+70);
+   // stroke(255,0,255);
+
+   
   
     if(a == width-30)
      {
@@ -91,9 +83,42 @@ float b=20;
       textSize(34);
       text("TARGET - AQUIRED: Inside house", width/2-200,height/2+200);
 
+
   
-    
-   }
  
+    // rect(x+20,x+20,x+70,x*5);
+    noFill();
+    text("0%", width/2-200,x+110);
+    text("100%",width/2+200,x+110);
+    //text("100", 
+    //rectangle not moving
+       rect(width/2-200,x+120,x+400,x*2);
+         stroke(255,0,255);
+         fill(255);
+      //rectangle moving
+      rect(width/2-200,x+120,b,x*2);
+        if (keyPressed)
+       {
+          if (keyCode == LEFT)
+            {
+             
+               b ++;
+            }
+            
+       
+            
+       }
+       
+   
+     if(b== x+400)
+           {
+             b--;
+           
+           }
   
- }
+           //  text("Battery full", width/2+300,x+110);
+           
+            
+     
+   }
+}
