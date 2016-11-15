@@ -1,7 +1,7 @@
 boolean menu = false;
 
 PImage img;
-
+float theta;
 
   float x=20;
 float y=20;

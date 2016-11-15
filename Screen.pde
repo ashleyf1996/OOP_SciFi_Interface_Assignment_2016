@@ -60,7 +60,8 @@ class Screen
      
 
      
-       float xy=30;
+      // float xy=30;
+
  
     stroke(255);          // Setting the outline (stroke) to black
     fill(0);
@@ -74,6 +75,7 @@ class Screen
     //lhs
      arc(width/2, height/2, 120, 120, -PI / 6, PI / 6);
      arc(width/2, height/2, 100, 100, PI / 2, 2 * PI / 2);
+
      
       //upper half
       fill(255,0,0);
@@ -88,18 +90,43 @@ class Screen
  
     // rect(x+20,x+20,x+70,x*5);
     noFill();
-    text("0%", width/2-200,x+110);
-    text("100%",width/2+200,x+110);
-    //text("100", 
+    textSize(15);
+    text("0%", width/2-200,x+90);
+    text("100%",width/2+50,x+90);
+    textSize(30);
+    text("+", width/2+110,X+155);
+    //text("100",width/2+100 
     //rectangle not moving
-       rect(width/2-200,x+120,x+400,x*2);
+       rect(width/2-200,x+100,x+250,x*3);
          stroke(255,0,255);
          fill(255);
       //rectangle moving
-      rect(width/2-200,x+120,b,x*2);
+      rect(width/2-200,x+100,b,x*3);
+
+      
+      stroke(255);
+      // battery: line 1 top
+      line(width/2-220,x+70,width/2+100,x+70);
+      //line 2: left
+      line(width/2-220,x+190,width/2+100,x+190);
+      ///line 3: bottom
+      line(width/2-220,x+70,width/2-220,x+190);
+      //line4:bottom half of right
+      line(width/2+100,x+190,width/2+100,x+150);
+      //line 5: top half of right
+      line(width/2+100,x+70,width/2+100,x+110);
+      //batter bit
+      noFill();
+      rect(width/2+100,x+100,50,50);
+      
+      
+      
+
+      
+      
         if (keyPressed)
        {
-          if (keyCode == LEFT)
+          if (keyCode == RIGHT)
             {
              
                b ++;
@@ -110,13 +137,15 @@ class Screen
        }
        
    
-     if(b== x+400)
+     if(b== x+250)
            {
+            
              b--;
+               text("Battery full", width/2+500,x+110);
            
            }
   
-           //  text("Battery full", width/2+300,x+110);
+           // 
            
             
      
