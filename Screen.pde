@@ -147,7 +147,11 @@ class Screen
   
            // 
            
-            
-     
+         
+   }
+   
+   void screen3()
+   {
+     ellipse(200,200,50,50);
    }
 }
