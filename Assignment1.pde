@@ -43,7 +43,7 @@ Screen screen = new Screen();
   
 void draw()
 {
-  //TO switch screens
+  //Switch statement to switch between screens
   switch(menu)
   {
     case 0:
@@ -60,13 +60,12 @@ void draw()
     }
       case 2:
     {
-       println("Hey");
-    fill(0);
-    rect(200, 0, width-200, height);
+      screen.screen3();
+     
     }
   }
  
-
+//image
 image(img, width/2-25,height/2-25);
 img.resize(50,50);
 
