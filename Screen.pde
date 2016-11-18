@@ -25,7 +25,15 @@ class Screen
     
        background(0);
    // stroke(255,0,255);
-
+      
+      rect(a,b,400,10);
+      
+     int i=0;
+     for(i=0;i<width;i+=20)
+     {
+       stroke(255,0,255);
+       line(i,0,i,height);
+     }
    
     //bar going across screen --> not currently drawn in sketch
     if(a == width-30)
@@ -88,12 +96,37 @@ class Screen
       text("TARGET - AQUIRED: Inside house", width/2-200,height/2+200);
 
 
+
+   }
+   void screen2()
+   {
+      println("Hey");
+    fill(0);
+    rect(200, 0, width-200, height);
+   }
+   
+    void screen3()
+   {
+      println("yo");
+    fill(0);
+    fill(255,0,255);
+    ellipse(300,400,50,50);
+    rect(200, 0, width-200, height);
+   }
+     void screen4()
+   {
+      println("ashley is cool");
+    fill(0);
+    fill(0);
+    ellipse(300,400,50,50);
+    rect(200, 0, width-200, height);
+    
   
      //BATERY
     // rect(x+20,x+20,x+70,x*5);
     noFill();
     textSize(15);
-    text("0%", width/2-200,x+90);
+    text("0%", 400,x+90);
     text("100%",width/2+50,x+90);
     textSize(30);
     text("+", width/2+110,X+155);
@@ -137,27 +170,4 @@ class Screen
         }
   }
    
-   void screen2()
-   {
-      println("Hey");
-    fill(0);
-    rect(200, 0, width-200, height);
    }
-   
-    void screen3()
-   {
-      println("yo");
-    fill(0);
-    fill(255,0,255);
-    ellipse(300,400,50,50);
-    rect(200, 0, width-200, height);
-   }
-     void screen4()
-   {
-      println("ashley is cool");
-    fill(0);
-    fill(255,0,0);
-    ellipse(300,400,50,50);
-    rect(200, 0, width-200, height);
-   }
-}

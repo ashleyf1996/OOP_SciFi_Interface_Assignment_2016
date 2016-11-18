@@ -2,7 +2,6 @@
 int menu = 0;
 boolean startUp = true;
 PImage img;
-float theta;
 float x=20;
 float y=20;
 float a=20;
@@ -16,6 +15,7 @@ void setup()
   size(1350,700);
  background(0);
  
+
  //This loads my target image
   img = loadImage("terminator_pic.jpg");
 
