@@ -20,7 +20,7 @@ class Screen
    }
 
   //Screen two: display buttons, termiators eye and target
-   void nextScreen()
+   void screen1()
    {
     
        background(0);
@@ -62,11 +62,6 @@ class Screen
      text("Battery Life", 50, 350);
      ellipse(50,380,50,50);
      
-     //white button
-     fill(255,255,255);
-      text("Weapons", 50, 430);
-     ellipse(50,460,50,50);
-    
 
    //Terminators eye
     stroke(255);          // Setting the outline (stroke) to black
@@ -142,10 +137,27 @@ class Screen
         }
   }
    
-   void screen3()
+   void screen2()
    {
       println("Hey");
     fill(0);
+    rect(200, 0, width-200, height);
+   }
+   
+    void screen3()
+   {
+      println("yo");
+    fill(0);
+    fill(255,0,255);
+    ellipse(300,400,50,50);
+    rect(200, 0, width-200, height);
+   }
+     void screen4()
+   {
+      println("ashley is cool");
+    fill(0);
+    fill(255,0,0);
+    ellipse(300,400,50,50);
     rect(200, 0, width-200, height);
    }
 }

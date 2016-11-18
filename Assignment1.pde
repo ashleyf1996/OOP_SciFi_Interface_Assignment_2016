@@ -31,11 +31,27 @@ Screen screen = new Screen();
             menu = 1;
         }
         //The co-ordinanates of my circle (button)
-         if(mouseX>25 && mouseX<75)
+        if(mouseX>25 && mouseX<75)
+        {
+          if(mouseY > 180 && mouseY<250)
+            {
+                   menu = 1;
+              }
+           }
+            
+          if(mouseX>25 && mouseX<75)
            {
-             if(mouseY > 150 && mouseY<300)
+             if(mouseY >270 && mouseY<330)
                {
-                   menu = 2;
+                   menu = 3;
+               }
+            }
+            
+            if(mouseX>25 && mouseX<75)
+           {
+             if(mouseY >350 && mouseY<410)
+               {
+                   menu = 4;
                }
             }
   }//end mouse pressed function
@@ -49,25 +65,41 @@ void draw()
     case 0:
     {
        screen.introScreen();
+       //image
+
        break;
     }
     
       case 1:
     {
        //background(0);
-      screen.nextScreen();
+      screen.screen1();
+      //image
+image(img, width/2-25,height/2-25);
+img.resize(50,50);
       break;
     }
       case 2:
     {
+      screen.screen2();
+      break;
+     
+    }
+       case 3:
+    {
       screen.screen3();
+      break;
+     
+    }
+           case 4:
+    {
+      screen.screen4();
+      break;
      
     }
   }
  
-//image
-image(img, width/2-25,height/2-25);
-img.resize(50,50);
+
 
     
  }
