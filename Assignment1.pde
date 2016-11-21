@@ -10,22 +10,37 @@ float c=20;
 float a1 = width/2;
 float b1;
 float c1;
-//Table table;
+Table table;
 
-//ArrayList<TargetData> targets= new ArrayList<TargetData>(); //Create an array list of type expense objects named expenses
-//TargetData tar;
+ArrayList<TargetData> targets= new ArrayList<TargetData>(); //Create an array list of type expense objects named expenses
+TargetData tar;
 
 void setup()
 {
   size(1350,700,P3D);
  background(0);
-  //table = loadTable("data.tsv", "header, tsv");
+  table = loadTable("data.tsv", "header, tsv");
+  
+  for (TableRow row : table.rows()) {
+   
+   String name = row.getString("Name");
+   Integer age = row.getInt("Age");
+ String objective = row.getString("Objective");
+ tar = new TargetData(name, age, objective);
+ targets.add(tar);
+ 
+ println(tar.toString());
+  }
+      
+  
   a1 = width/2;
   b1 = height/2;
   c1 = 0;
 
  //This loads my target image
   img = loadImage("terminator_pic.jpg");
+  
+  
 
 }
 
@@ -68,16 +83,6 @@ Screen screen = new Screen();
   
 void draw()
 {
-   // for (TableRow row : table.rows()) {
-    
-   // String name = row.getString("name");
-   // Integer age = row.getInt("age");
- // String objective = row.getString("objective");
- //   }
-        
-   //    tar = new TargetData(name, age, objective);
-    
-  //  targets.add(tar);
   //Switch statement to switch between screens
   switch(menu)
   {

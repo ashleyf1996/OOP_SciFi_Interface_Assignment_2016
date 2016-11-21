@@ -8,19 +8,21 @@ class Screen
   //Intro screen: to display terminator logo
    void introScreen()
    {
-     pushMatrix();
+    pushMatrix();
      translate(a1,b1,c1);
      noFill();
-     stroke(0);
-     ellipse(0,0,250,250);
-     noFill();
-     stroke(255,0,255);
-     ellipse(2,2,200,200);
-     popMatrix();
+    stroke(0);
+    ellipse(0,0,250,250);
+    noFill();
+   stroke(255,0,255);
+   ellipse(2,2,200,200);
+   popMatrix();
      
-     c1 = c1 + 2; 
+    c1 = c1 + 2; 
    textSize(30);
+   fill(255,255,255);
   text("Terminator", width/2-80, height/2);
+
 
 
            
@@ -31,15 +33,16 @@ class Screen
    {
     
        background(0);
-   // stroke(255,0,255);
+  
+  
       
       rect(a,b,400,10);
        
       
      int i=0;
-     for(i=0;i<width;i+=5)
+     for(i=200;i<width-200;i+=5)
      {
-       stroke(255,0,255);
+       
        line(i,0,width/2,height/2);
      }
    
@@ -82,8 +85,7 @@ class Screen
    //Terminators eye
     stroke(255);          // Setting the outline (stroke) to black
     fill(0);
-   
-    noFill();
+  
     ellipse(width/2,height/2,250,250);
     //Right hand side
     arc(width/2, height/2, 200, 200, -PI / 6, PI / 6);
@@ -98,10 +100,11 @@ class Screen
       fill(255,0,0);
       ellipse(width/2,height/2,70,70); 
       stroke(255);
-      fill(255,255,255);
+     
       
       textSize(34);
-      text("TARGET - AQUIRED: Inside house", width/2-300,150);
+      fill(255,0,255);
+      text("TARGET - AQUIRED: Inside house", width/2-250,150);
 
 
 
@@ -111,22 +114,26 @@ class Screen
       println("Hey");
     fill(0);
     rect(200, 0, width-200, height);
+      
    }
    
     void screen3()
    {
       println("yo");
-    fill(0);
-    fill(255,0,255);
-    ellipse(300,400,50,50);
-    rect(200, 0, width-200, height);
+      fill(255,255,255);
+    rect(200, 0, width,height);
+    ellipse(300,20,40,70);
    }
-     void screen4()
+         void screen4()
    {
       println("ashley is cool");
- 
+
+    fill(255,255,255);
+    ellipse(300,400,50,50);
+    rect(200, 0, width-200, height);
+    
   
-     //B82rz. TG4
+     //BATERY
     // rect(x+20,x+20,x+70,x*5);
     noFill();
     textSize(15);
@@ -172,5 +179,6 @@ class Screen
             b--;
             text("Battery full", width/2+500,x+110);
         }
-   }
+  }
+   
    }
