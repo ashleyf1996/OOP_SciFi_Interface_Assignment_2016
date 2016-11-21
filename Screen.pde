@@ -12,9 +12,10 @@ class Screen
      translate(a1,b1,c1);
      noFill();
     stroke(0);
+    stroke(255,0,0);
     ellipse(0,0,250,250);
     noFill();
-   stroke(255,0,255);
+   stroke(0,0,255);
    ellipse(2,2,200,200);
    popMatrix();
      
@@ -103,7 +104,9 @@ class Screen
      
       
       textSize(34);
-      fill(255,0,255);
+     
+      fill(0,255,0);
+ 
       text("TARGET - AQUIRED: Inside house", width/2-250,150);
 
 
