@@ -7,14 +7,22 @@ float y=20;
 float a=20;
 float b=0;
 float c=20;
+float a1 = width/2;
+float b1;
+float c1;
+//Table table;
 
-
+//ArrayList<TargetData> targets= new ArrayList<TargetData>(); //Create an array list of type expense objects named expenses
+//TargetData tar;
 
 void setup()
 {
-  size(1350,700);
+  size(1350,700,P3D);
  background(0);
- 
+  //table = loadTable("data.tsv", "header, tsv");
+  a1 = width/2;
+  b1 = height/2;
+  c1 = 0;
 
  //This loads my target image
   img = loadImage("terminator_pic.jpg");
@@ -23,6 +31,7 @@ void setup()
 
 //Creating my object of the class screen
 Screen screen = new Screen();
+//TargetData targetdata = new TargetData();
 
   void mousePressed()
   {
@@ -59,12 +68,23 @@ Screen screen = new Screen();
   
 void draw()
 {
+   // for (TableRow row : table.rows()) {
+    
+   // String name = row.getString("name");
+   // Integer age = row.getInt("age");
+ // String objective = row.getString("objective");
+ //   }
+        
+   //    tar = new TargetData(name, age, objective);
+    
+  //  targets.add(tar);
   //Switch statement to switch between screens
   switch(menu)
   {
     case 0:
     {
        screen.introScreen();
+      // background(255,0,255);
        //image
 
        break;

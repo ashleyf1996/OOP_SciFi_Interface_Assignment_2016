@@ -1,7 +1,6 @@
 //Class screen
 class Screen
 {
-  
   //Boolean variable
   //To stop my bar going off the end of the screen
   boolean endOfScreen = false;
@@ -9,13 +8,21 @@ class Screen
   //Intro screen: to display terminator logo
    void introScreen()
    {
-     background(0);
-     fill(255,0,255);
-      textSize(60);
-      textAlign(LEFT);
-      text("\nTERMINATOR", 400, 200);
-      textSize(10);
-     text("Click to see interface", 550, 350);
+     pushMatrix();
+     translate(a1,b1,c1);
+     noFill();
+     stroke(0);
+     ellipse(0,0,250,250);
+     noFill();
+     stroke(255,0,255);
+     ellipse(2,2,200,200);
+     popMatrix();
+     
+     c1 = c1 + 2; 
+   textSize(30);
+  text("Terminator", width/2-80, height/2);
+
+
            
    }
 
@@ -27,12 +34,13 @@ class Screen
    // stroke(255,0,255);
       
       rect(a,b,400,10);
+       
       
      int i=0;
-     for(i=0;i<width;i+=20)
+     for(i=0;i<width;i+=5)
      {
        stroke(255,0,255);
-       line(i,0,i,height);
+       line(i,0,width/2,height/2);
      }
    
     //bar going across screen --> not currently drawn in sketch
@@ -50,7 +58,7 @@ class Screen
      }
      else
      {
-       a++;
+       a=a+2;
      
      }
      
@@ -93,7 +101,7 @@ class Screen
       fill(255,255,255);
       
       textSize(34);
-      text("TARGET - AQUIRED: Inside house", width/2-200,height/2+200);
+      text("TARGET - AQUIRED: Inside house", width/2-300,150);
 
 
 
@@ -116,13 +124,9 @@ class Screen
      void screen4()
    {
       println("ashley is cool");
-    fill(0);
-    fill(0);
-    ellipse(300,400,50,50);
-    rect(200, 0, width-200, height);
-    
+ 
   
-     //BATERY
+     //B82rz. TG4
     // rect(x+20,x+20,x+70,x*5);
     noFill();
     textSize(15);
@@ -168,6 +172,5 @@ class Screen
             b--;
             text("Battery full", width/2+500,x+110);
         }
-  }
-   
+   }
    }
