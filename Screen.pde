@@ -4,18 +4,17 @@ class Screen
   //Boolean variable
   //To stop my bar going off the end of the screen
   boolean endOfScreen = false;
-
+ //float r=0;
   //Intro screen: to display terminator logo
    void introScreen()
    {
     pushMatrix();
-     translate(a1,b1,c1);
+   translate(a1,b1,c1);
      noFill();
     stroke(0);
-    stroke(255,0,0);
     ellipse(0,0,250,250);
     noFill();
-   stroke(0,0,255);
+   stroke(255,0,255);
    ellipse(2,2,200,200);
    popMatrix();
      
@@ -23,7 +22,7 @@ class Screen
    textSize(30);
    fill(255,255,255);
   text("Terminator", width/2-80, height/2);
-
+    
 
 
            
@@ -34,21 +33,21 @@ class Screen
    {
     
        background(0);
-  
-  
+       //beam
+       stroke(255,0,0);
       
-      rect(a,b,400,10);
-       
-      
-     int i=0;
-     for(i=200;i<width-200;i+=5)
+      int i=0;
+     for(i=450;i<width-450;i+=5)
      {
-       
-       line(i,0,width/2,height/2);
+        
+         line(i,0,width/2,height/2-125);
      }
-   
+         //wrting in beam
+      textSize(34);
+      fill(0,255,0);
+      text("TARGET:                     Inside house", width/2-255,200);
     //bar going across screen --> not currently drawn in sketch
-    if(a == width-30)
+  /*  if(a == width-30)
      {
        endOfScreen = true;
      }
@@ -64,108 +63,78 @@ class Screen
      {
        a=a+2;
      
-     }
-     
-     textSize(15);
-     //red button
-     fill(255,0,0);
-     ellipse(50,220,50,50);
-     text("main screen", 50,190);
-     
+    */
+  
      //yellow button
-     fill(255,255,0);
-     text("Get Target profile", 45, 270);
-     ellipse(50,300,50,50);
+     textSize(15);
+     fill(0,0,255);
+     text("Charge terminators battery", 40, 550);
+     ellipse(50,600,50,50);
      
-     //green button
-     fill(0,255,0);
-     text("Battery Life", 50, 350);
-     ellipse(50,380,50,50);
      
 
    //Terminators eye
     stroke(255);          // Setting the outline (stroke) to black
     fill(0);
-  
-    ellipse(width/2,height/2,250,250);
+   ellipse(width/2,height/2-100,250,250);
     //Right hand side
-    arc(width/2, height/2, 200, 200, -PI / 6, PI / 6);
-    arc(width/2, height/2, 200, 200, PI / 2, 2 * PI / 2);
+    arc(width/2, height/2-100, 200, 200, -PI / 6, PI / 6);
+    arc(width/2, height/2-100, 200, 200, PI / 2, 2 * PI / 2);
     
     //left hand side
-     arc(width/2, height/2, 120, 120, -PI / 6, PI / 6);
-     arc(width/2, height/2, 100, 100, PI / 2, 2 * PI / 2);
+     arc(width/2, height/2-100, 120, 120, -PI / 6, PI / 6);
+     arc(width/2, height/2-100, 100, 100, PI / 2, 2 * PI / 2);
 
      
       //upper half
       fill(255,0,0);
-      ellipse(width/2,height/2,70,70); 
+      ellipse(width/2,height/2-100,70,70); 
       stroke(255);
-     
-      
-      textSize(34);
-     
-      fill(0,255,0);
- 
-      text("TARGET - AQUIRED: Inside house", width/2-250,150);
-
 
 
    }
-   void screen2()
-   {
-      println("Hey");
-    fill(0);
-    rect(200, 0, width-200, height);
-      
-   }
-   
+  
     void screen3()
    {
       println("yo");
-      fill(255,255,255);
-    rect(200, 0, width,height);
-    ellipse(300,20,40,70);
-   }
-         void screen4()
-   {
-      println("ashley is cool");
+      //the background
 
-    fill(255,255,255);
-    ellipse(300,400,50,50);
-    rect(200, 0, width-200, height);
-    
   
      //BATERY
-    // rect(x+20,x+20,x+70,x*5);
-    noFill();
-    textSize(15);
-    text("0%", 400,x+90);
-    text("100%",width/2+50,x+90);
-    textSize(30);
-    text("+", width/2+110,X+155);
-    //text("100",width/2+100 
-    //rectangle not moving
-    rect(width/2-200,x+100,x+250,x*3);
-    stroke(255,0,255);
-    fill(255);
-    //rectangle moving
-    rect(width/2-200,x+100,b,x*3);
 
-    stroke(255);
+    textSize(15);
+    fill(255);
+    text("0%", 378,height-158);
+    text("100%",width/2-50,height-158);
+    textSize(30);
+    fill(255);
+    text("+", width/2+25,height-125);
+   noFill();
+    //rectangle not moving
+   ///  fill(255,0,255);
+    rect(width/2-300,height-150,x+250,x*3);
+    stroke(255,0,255);
+    //fill(255);
+    //rectangle moving
+    fill(255,0,255);
+    rect(width/2-300,height-150,b,x*3);
+    
+    noFill();
+    stroke(255,255,255);
+    //white rect
+    rect(width/2-320,height-180,x+300,x*5);
+    
+    //bit at end
+    rect(width/2,height-155,70,50);
+    
+
+    fill(255,0,255);
+     stroke(255,0,255);
     // battery: line 1 top
-    line(width/2-220,x+70,width/2+100,x+70);
-    //line 2: left
-    line(width/2-220,x+190,width/2+100,x+190);
-    ///line 3: bottom
-    line(width/2-220,x+70,width/2-220,x+190);
-    //line4:bottom half of right
-    line(width/2+100,x+190,width/2+100,x+150);
-    //line 5: top half of right
-    line(width/2+100,x+70,width/2+100,x+110);
+
     //batter bit
     noFill();
-    rect(width/2+100,x+100,50,50);
+   // rect(width/2+100,x+100,50,50);
       
    //To fill battery bar
     if (keyPressed)
@@ -180,8 +149,9 @@ class Screen
      if(b== x+250)
         {
             b--;
-            text("Battery full", width/2+500,x+110);
+            text("Battery full", width/2+125,height-150);
         }
   }
-   
    }
+        
+ 
