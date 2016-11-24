@@ -12,15 +12,32 @@ float b1;
 float c1;
 Table table;
 
-ArrayList<TargetData> targets= new ArrayList<TargetData>(); //Create an array list of type expense objects named expenses
-TargetData tar;
 
+String[] words;
+  int i=0;
+ArrayList<TargetData> targets= new ArrayList<TargetData>(); //Create an array list of type expense objects named expenses
+  TargetData tar;
+boolean batteryEmpty = true;
+ 
 void setup()
 {
   size(1350,700,P3D);
  background(0);
-  table = loadTable("data.tsv", "header, tsv");
   
+
+
+
+   table = loadTable("data.tsv", "header, tsv");
+  // String[] lines = loadStrings("data.tsv");
+ 
+// for(int i=0; i<lines.length;i++)
+// {
+  
+//      text(lines[i] +"\t",100,100);
+//   i++;
+// }
+  fill(255);
+
   for (TableRow row : table.rows()) {
    
    String name = row.getString("Name");
@@ -46,8 +63,10 @@ void setup()
 
 //Creating my object of the class screen
 Screen screen = new Screen();
-//TargetData targetdata = new TargetData();
+Radar radar = new Radar();
 
+
+  //printArray(lines);
   void mousePressed()
   {
       if(startUp == true)
@@ -68,12 +87,14 @@ Screen screen = new Screen();
   
 void draw()
 {
+ 
   //Switch statement to switch between screens
   switch(menu)
   {
     case 0:
     {
        screen.introScreen();
+      
       // background(255,0,255);
        //image
 
@@ -84,9 +105,27 @@ void draw()
     {
        //background(0);
       screen.screen1();
+      radar.drawRadar();
       //image
 image(img, width/2-25,height/2-125);
 img.resize(50,50);
+ if(frameCount%30==0)
+          {
+            if(batteryEmpty == true)
+            {
+              fill(255,0,0);
+              textSize(32);
+              text("WARNING BATTERY EMPTY",width/2+150, height - 200);
+              delay(3000);
+            }
+            
+          }
+          if(batteryEmpty==false)
+            {
+              fill(255,0,0);
+              text("BATTERY FULL", width/2+150,height-200);
+            }
+           
       break;
     }
       case 2:
