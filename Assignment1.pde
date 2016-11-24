@@ -64,6 +64,8 @@ void setup()
 //Creating my object of the class screen
 Screen screen = new Screen();
 Radar radar = new Radar();
+target target = new target();
+
 
 
   //printArray(lines);
@@ -106,6 +108,8 @@ void draw()
        //background(0);
       screen.screen1();
       radar.drawRadar();
+      target.drawTarget();
+
       //image
 image(img, width/2-25,height/2-125);
 img.resize(50,50);
