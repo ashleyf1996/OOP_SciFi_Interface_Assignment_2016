@@ -19,7 +19,7 @@ int i=0;
 ArrayList<TargetData> targets= new ArrayList<TargetData>();  
   TargetData tar;
 
-
+//sound
 import ddf.minim.*;
 Minim minim;
 AudioPlayer player;
@@ -31,8 +31,8 @@ void setup()
      size(1350,700,P3D);
      background(0);
        
-    minim = new Minim(this);
-    player = minim.loadFile("kill.wav");
+     minim = new Minim(this);
+     player = minim.loadFile("kill.wav");
      table = loadTable("data.tsv", "header, tsv");
     
     //initialising the variables that translate my circles
@@ -124,4 +124,4 @@ void draw()
     }
   }
  
- }//Declaring my global variables
+ }
